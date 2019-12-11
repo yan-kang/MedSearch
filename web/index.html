@@ -1,0 +1,878 @@
+<html>
+
+<head>
+    <title>医疗问诊网站</title>
+    <link rel="stylesheet" href="./lib/bootstrap.css">
+    <link rel="stylesheet" href="lib/fonts/iconfont.css">
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top ">
+        <a class="navbar-brand" href="#"> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>医疗问诊</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">主页 <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">疾病大全</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">医生问诊</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">医院指南</a>
+                </li>
+
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="疾病/医生/医院" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">搜索</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="col-12" style="height: 3rem;"></div>
+
+    <main class="row" style="width: 80%;margin: auto;">
+
+
+        <div class="col-12" style="height: 1rem;"></div>
+
+        <div class="card col-12 row" style="height: 25rem;">
+            <div class="col-12 row" style="height: 25rem;">
+
+                <div class="list-group col-4" style="height: 25rem;">
+                    <a class="list-group-item list-group-item-action collapse-open" data-toggle="collapse" role="button"
+                        for="de-rooms">科室</a>
+                    <div class="collapse list-group" id="de-rooms" style="width: 80%;">
+                        <a href="#" class="list-group-item list-group-item-action">内科</a>
+                        <a href="#" class="list-group-item list-group-item-action">外科</a>
+                        <a href="#" class="list-group-item list-group-item-action">妇产科</a>
+                        <a href="#" class="list-group-item list-group-item-action">儿科</a>
+                    </div>
+                    <a class="list-group-item list-group-item-action collapse-open" data-toggle="collapse" role="button"
+                        for="de-types">疾病类型</a>
+                    <div class="collapse list-group" id="de-types" style="width: 80%;">
+                        <a href="#" class="list-group-item list-group-item-action">慢性</a>
+                        <a href="#" class="list-group-item list-group-item-action">传染</a>
+                        <a href="#" class="list-group-item list-group-item-action">职业</a>
+                        <a href="#" class="list-group-item list-group-item-action">遗传</a>
+                    </div>
+                    <a class="list-group-item list-group-item-action collapse-open" data-toggle="collapse" role="button"
+                        for="de-people">人群</a>
+                    <div class="collapse list-group" id="de-people" style="width: 80%;">
+                        <a href="#" class="list-group-item list-group-item-action">男性</a>
+                        <a href="#" class="list-group-item list-group-item-action">女性</a>
+                        <a href="#" class="list-group-item list-group-item-action">老人</a>
+                        <a href="#" class="list-group-item list-group-item-action">小孩</a>
+                    </div>
+                    <a class="list-group-item list-group-item-action collapse-open" data-toggle="collapse" role="button"
+                        for="de-pos">部位</a>
+                    <div class="collapse list-group" id="de-pos" style="width: 80%;">
+                        <a href="#" class="list-group-item list-group-item-action">头部</a>
+                        <a href="#" class="list-group-item list-group-item-action">全身</a>
+                        <a href="#" class="list-group-item list-group-item-action">四肢</a>
+                        <a href="#" class="list-group-item list-group-item-action">器官</a>
+                    </div>
+                </div>
+
+                <div class="col-8" style="height: 25rem;">
+                    <ul class="list-group ">
+                        <a class="list-group-item list-group-item-action collapse-open" data-toggle="collapse" role="button"
+                        for="room-inner">心血管内科</a>
+                        <div class="collapse list-group list-group-horizontal" id="room-inner" style="width: 80%;">
+                                <a href="#" class="list-group-item list-group-item-action">男性</a>
+                                <a href="#" class="list-group-item list-group-item-action">女性</a>
+                                <a href="#" class="list-group-item list-group-item-action">老人</a>
+                                <a href="#" class="list-group-item list-group-item-action">小孩</a>
+                        </div>
+                        <li class="list-group-item list-group-item-action collapse-open">神经内科</li>
+                        <li class="list-group-item list-group-item-action collapse-open">肾内科</li>
+                        <li class="list-group-item list-group-item-action collapse-open">消化内科</li>
+                        <li class="list-group-item list-group-item-action collapse-open">血液科</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="col-12" style="height: 2rem;"></div>
+
+        <div class="card col-12 row">
+
+            <div class="card-header">
+                医生推荐
+            </div>
+            <br>
+
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#d-child" role="tab"
+                        aria-controls="home" aria-selected="true">儿科</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#d-inner" role="tab"
+                        aria-controls="profile" aria-selected="false">消化内科</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#d-kyn" role="tab"
+                        aria-controls="contact" aria-selected="false">泌尿外科</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="d-child" role="tabpanel" aria-labelledby="home-tab">
+                    <div class="row col-12">
+                        <div class="card col-3">
+                            <div class="card-body">
+                                <h5 class="card-title">八意永琳</h5>
+                                <p class="card-text">评分：5</p>
+                                <a href="#" class="btn btn-primary">在线咨询</a>
+                            </div>
+                        </div>
+
+                        <div class="card col-3">
+                            <div class="card-body">
+                                <h5 class="card-title">八意永琳</h5>
+                                <p class="card-text">评分：5</p>
+                                <a href="#" class="btn btn-primary">在线咨询</a>
+                            </div>
+                        </div>
+
+                        <div class="card col-3">
+                            <div class="card-body">
+                                <h5 class="card-title">八意永琳</h5>
+                                <p class="card-text">评分：5</p>
+                                <a href="#" class="btn btn-primary">在线咨询</a>
+                            </div>
+                        </div>
+
+                        <div class="card col-3">
+                            <div class="card-body">
+                                <h5 class="card-title">八意永琳</h5>
+                                <p class="card-text">评分：5</p>
+                                <a href="#" class="btn btn-primary">在线咨询</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="d-inner" role="tabpanel" aria-labelledby="profile-tab">
+                    <div class="row col-12">
+                        <div class="card col-3">
+                            <div class="card-body">
+                                <h5 class="card-title">八意永琳</h5>
+                                <p class="card-text">评分：5</p>
+                                <a href="#" class="btn btn-primary">在线咨询</a>
+                            </div>
+                        </div>
+
+                        <div class="card col-3">
+                            <div class="card-body">
+                                <h5 class="card-title">八意永琳</h5>
+                                <p class="card-text">评分：5</p>
+                                <a href="#" class="btn btn-primary">在线咨询</a>
+                            </div>
+                        </div>
+
+                        <div class="card col-3">
+                            <div class="card-body">
+                                <h5 class="card-title">八意永琳</h5>
+                                <p class="card-text">评分：5</p>
+                                <a href="#" class="btn btn-primary">在线咨询</a>
+                            </div>
+                        </div>
+
+                        <div class="card col-3">
+                            <div class="card-body">
+                                <h5 class="card-title">八意永琳</h5>
+                                <p class="card-text">评分：5</p>
+                                <a href="#" class="btn btn-primary">在线咨询</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="d-kyn" role="tabpanel" aria-labelledby="contact-tab">
+                    <div class="row col-12">
+                        <div class="card col-3">
+                            <div class="card-body">
+                                <h5 class="card-title">八意永琳</h5>
+                                <p class="card-text">评分：5</p>
+                                <a href="#" class="btn btn-primary">在线咨询</a>
+                            </div>
+                        </div>
+
+                        <div class="card col-3">
+                            <div class="card-body">
+                                <h5 class="card-title">八意永琳</h5>
+                                <p class="card-text">评分：5</p>
+                                <a href="#" class="btn btn-primary">在线咨询</a>
+                            </div>
+                        </div>
+
+                        <div class="card col-3">
+                            <div class="card-body">
+                                <h5 class="card-title">八意永琳</h5>
+                                <p class="card-text">评分：5</p>
+                                <a href="#" class="btn btn-primary">在线咨询</a>
+                            </div>
+                        </div>
+
+                        <div class="card col-3">
+                            <div class="card-body">
+                                <h5 class="card-title">八意永琳</h5>
+                                <p class="card-text">评分：5</p>
+                                <a href="#" class="btn btn-primary">在线咨询</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12" style="height: 2rem;"></div>
+
+        <div class="card col-12 row">
+
+            <div class="card-header">
+                医院指南
+            </div>
+            <br>
+
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                        aria-controls="home" aria-selected="true">按省市</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                        aria-controls="profile" aria-selected="false">按科室</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
+                        aria-controls="contact" aria-selected="false">按疾病</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <div class="home-hospital-info">
+                        <div>
+                            <div class="home-hospital-container" style="display: inline-block;">
+                                <div class="home-hospital-container-item">
+                                    <div class="list-contain">
+                                        <div class="list-contain-title">
+                                            <div><a href="https://dxy.com/search/health/index?keyword=病毒性肝炎"
+                                                    style="color:#28b7a3">病毒性肝炎</a><span class="more-arrow"></span>
+                                            </div>
+                                        </div>
+                                        <ul class="list-contain-ul">
+                                            <li style="width:100%" class="list-contain-no-icon"><a
+                                                    href="https://dxy.com/health/hospital/14881/section/1110"
+                                                    class="list-contain-link">复旦大学附属华山医院</a></li>
+                                            <li style="width:100%" class="list-contain-no-icon"><a
+                                                    href="https://dxy.com/health/hospital/9572/section/1110"
+                                                    class="list-contain-link">首都医科大学附属地坛医院</a></li>
+                                            <li style="width:100%" class="list-contain-no-icon"><a
+                                                    href="https://dxy.com/health/hospital/9120/section/1110"
+                                                    class="list-contain-link">上海交通大学医学院附属瑞金医院</a></li>
+                                            <li style="width:100%" class="list-contain-no-icon"><a
+                                                    href="https://dxy.com/health/hospital/4766/section/1110"
+                                                    class="list-contain-link">中山大学附属第三医院</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="home-hospital-container" style="display: inline-block;">
+                                <div class="home-hospital-container-item">
+                                    <div class="list-contain">
+                                        <div class="list-contain-title">
+                                            <div><a href="https://dxy.com/search/health/index?keyword=高血压"
+                                                    style="color:#28b7a3">高血压</a><span class="more-arrow"></span></div>
+                                        </div>
+                                        <ul class="list-contain-ul">
+                                            <li style="width:100%" class="list-contain-no-icon"><a
+                                                    href="https://dxy.com/health/hospital/8266/section/1101"
+                                                    class="list-contain-link">中国医学科学院阜外心血管病医院</a></li>
+                                            <li style="width:100%" class="list-contain-no-icon"><a
+                                                    href="https://dxy.com/health/hospital/3324/section/1101"
+                                                    class="list-contain-link">复旦大学附属中山医院</a></li>
+                                            <li style="width:100%" class="list-contain-no-icon"><a
+                                                    href="https://dxy.com/health/hospital/16062/section/1101"
+                                                    class="list-contain-link">首都医科大学附属北京安贞医院</a></li>
+                                            <li style="width:100%" class="list-contain-no-icon"><a
+                                                    href="https://dxy.com/health/hospital/9348/section/1101"
+                                                    class="list-contain-link">广东省人民医院</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="home-hospital-container" style="display: inline-block;">
+                                <div class="home-hospital-container-item">
+                                    <div class="list-contain">
+                                        <div class="list-contain-title">
+                                            <div><a href="https://dxy.com/search/health/index?keyword=冠心病"
+                                                    style="color:#28b7a3">冠心病</a><span class="more-arrow"></span></div>
+                                        </div>
+                                        <ul class="list-contain-ul">
+                                            <li style="width:100%" class="list-contain-no-icon"><a
+                                                    href="https://dxy.com/health/hospital/8266/section/1101"
+                                                    class="list-contain-link">中国医学科学院阜外心血管病医院</a></li>
+                                            <li style="width:100%" class="list-contain-no-icon"><a
+                                                    href="https://dxy.com/health/hospital/3324/section/1101"
+                                                    class="list-contain-link">复旦大学附属中山医院</a></li>
+                                            <li style="width:100%" class="list-contain-no-icon"><a
+                                                    href="https://dxy.com/health/hospital/16062/section/1101"
+                                                    class="list-contain-link">首都医科大学附属北京安贞医院</a></li>
+                                            <li style="width:100%" class="list-contain-no-icon"><a
+                                                    href="https://dxy.com/health/hospital/9348/section/1101"
+                                                    class="list-contain-link">广东省人民医院</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="home-hospital-container" style="display: inline-block;">
+                                <div class="home-hospital-container-item">
+                                    <div class="list-contain">
+                                        <div class="list-contain-title">
+                                            <div><a href="https://dxy.com/search/health/index?keyword=荨麻疹"
+                                                    style="color:#28b7a3">荨麻疹</a><span class="more-arrow"></span></div>
+                                        </div>
+                                        <ul class="list-contain-ul">
+                                            <li style="width:100%" class="list-contain-no-icon"><a
+                                                    href="https://dxy.com/health/hospital/6006/section/1105"
+                                                    class="list-contain-link">天津医科大学总医院</a></li>
+                                            <li style="width:100%" class="list-contain-no-icon"><a
+                                                    href="https://dxy.com/health/hospital/8555/section/1105"
+                                                    class="list-contain-link">重庆医科大学附属儿童医院</a></li>
+                                            <li style="width:100%" class="list-contain-no-icon"><a
+                                                    href="https://dxy.com/health/hospital/7323/section/1105"
+                                                    class="list-contain-link">北京世纪坛医院</a></li>
+                                            <li style="width:100%" class="list-contain-no-icon"><a
+                                                    href="https://dxy.com/health/hospital/8221/section/1105"
+                                                    class="list-contain-link">西安市儿童医院</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="home-hospital-container" style="display: inline-block;">
+                                <div class="home-hospital-container-item">
+                                    <div class="list-contain">
+                                        <div class="list-contain-title">
+                                            <div><a href="https://dxy.com/search/health/index?keyword=糖尿病"
+                                                    style="color:#28b7a3">糖尿病</a><span class="more-arrow"></span></div>
+                                        </div>
+                                        <ul class="list-contain-ul">
+                                            <li style="width:100%" class="list-contain-no-icon"><a
+                                                    href="https://dxy.com/health/hospital/9120/section/1104"
+                                                    class="list-contain-link">上海交通大学医学院附属瑞金医院</a></li>
+                                            <li style="width:100%" class="list-contain-no-icon"><a
+                                                    href="https://dxy.com/health/hospital/13744/section/1104"
+                                                    class="list-contain-link">北京协和医院</a></li>
+                                            <li style="width:100%" class="list-contain-no-icon"><a
+                                                    href="https://dxy.com/health/hospital/12704/section/1104"
+                                                    class="list-contain-link">中国人民解放军总医院</a></li>
+                                            <li style="width:100%" class="list-contain-no-icon"><a
+                                                    href="https://dxy.com/health/hospital/7453/section/1104"
+                                                    class="list-contain-link">中南大学湘雅二医院</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="home-hospital-container" style="display: inline-block;">
+                                <div class="home-hospital-container-item">
+                                    <div class="list-contain">
+                                        <div class="list-contain-title">
+                                            <div><a href="https://dxy.com/search/health/index?keyword=前列腺炎"
+                                                    style="color:#28b7a3">前列腺炎</a><span class="more-arrow"></span></div>
+                                        </div>
+                                        <ul class="list-contain-ul">
+                                            <li style="width:100%" class="list-contain-no-icon"><a
+                                                    href="https://dxy.com/health/hospital/19129/section/1205"
+                                                    class="list-contain-link">北京大学第一医院</a></li>
+                                            <li style="width:100%" class="list-contain-no-icon"><a
+                                                    href="https://dxy.com/health/hospital/12704/section/1205"
+                                                    class="list-contain-link">中国人民解放军总医院</a></li>
+                                            <li style="width:100%" class="list-contain-no-icon"><a
+                                                    href="https://dxy.com/health/hospital/11390/section/1205"
+                                                    class="list-contain-link">上海长海医院</a></li>
+                                            <li style="width:100%" class="list-contain-no-icon"><a
+                                                    href="https://dxy.com/health/hospital/10104/section/1205"
+                                                    class="list-contain-link">华中科技大学同济医学院附属同济医院</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="home-hospital-container" style="display: inline-block;">
+                                <div class="home-hospital-container-item">
+                                    <div class="list-contain">
+                                        <div class="list-contain-title">
+                                            <div><a href="https://dxy.com/search/health/index?keyword=便秘"
+                                                    style="color:#28b7a3">便秘</a><span class="more-arrow"></span></div>
+                                        </div>
+                                        <ul class="list-contain-ul">
+                                            <li style="width:100%" class="list-contain-no-icon"><a
+                                                    href="https://dxy.com/health/hospital/15390/section/1103"
+                                                    class="list-contain-link">西京医院</a></li>
+                                            <li style="width:100%" class="list-contain-no-icon"><a
+                                                    href="https://dxy.com/health/hospital/16275/section/1103"
+                                                    class="list-contain-link">上海交通大学医学院附属仁济医院</a></li>
+                                            <li style="width:100%" class="list-contain-no-icon"><a
+                                                    href="https://dxy.com/health/hospital/13744/section/1103"
+                                                    class="list-contain-link">北京协和医院</a></li>
+                                            <li style="width:100%" class="list-contain-no-icon"><a
+                                                    href="https://dxy.com/health/hospital/12704/section/1103"
+                                                    class="list-contain-link">中国人民解放军总医院</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="home-hospital-container" style="display: inline-block;">
+                                <div class="home-hospital-container-item">
+                                    <div class="list-contain">
+                                        <div class="list-contain-title">
+                                            <div><a href="https://dxy.com/search/health/index?keyword=骨折"
+                                                    style="color:#28b7a3">骨折</a><span class="more-arrow"></span></div>
+                                        </div>
+                                        <ul class="list-contain-ul">
+                                            <li style="width:100%" class="list-contain-no-icon"><a
+                                                    href="https://dxy.com/health/hospital/12704/section/1204"
+                                                    class="list-contain-link">中国人民解放军总医院</a></li>
+                                            <li style="width:100%" class="list-contain-no-icon"><a
+                                                    href="https://dxy.com/health/hospital/19504/section/1204"
+                                                    class="list-contain-link">上海市第六人民医院</a></li>
+                                            <li style="width:100%" class="list-contain-no-icon"><a
+                                                    href="https://dxy.com/health/hospital/10444/section/1204"
+                                                    class="list-contain-link">北京大学第三医院</a></li>
+                                            <li style="width:100%" class="list-contain-no-icon"><a
+                                                    href="https://dxy.com/health/hospital/13744/section/1204"
+                                                    class="list-contain-link">北京协和医院</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                    <div>
+                        <div class="home-hospital-container" style="display: inline-block;">
+                            <div class="home-hospital-container-item">
+                                <div class="list-contain">
+                                    <div class="list-contain-title">
+                                        <div><a href="https://dxy.com/search/health/index?keyword=病毒性肝炎"
+                                                style="color:#28b7a3">病毒性肝炎</a><span class="more-arrow"></span>
+                                        </div>
+                                    </div>
+                                    <ul class="list-contain-ul">
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/14881/section/1110"
+                                                class="list-contain-link">复旦大学附属华山医院</a></li>
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/9572/section/1110"
+                                                class="list-contain-link">首都医科大学附属地坛医院</a></li>
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/9120/section/1110"
+                                                class="list-contain-link">上海交通大学医学院附属瑞金医院</a></li>
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/4766/section/1110"
+                                                class="list-contain-link">中山大学附属第三医院</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="home-hospital-container" style="display: inline-block;">
+                            <div class="home-hospital-container-item">
+                                <div class="list-contain">
+                                    <div class="list-contain-title">
+                                        <div><a href="https://dxy.com/search/health/index?keyword=高血压"
+                                                style="color:#28b7a3">高血压</a><span class="more-arrow"></span></div>
+                                    </div>
+                                    <ul class="list-contain-ul">
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/8266/section/1101"
+                                                class="list-contain-link">中国医学科学院阜外心血管病医院</a></li>
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/3324/section/1101"
+                                                class="list-contain-link">复旦大学附属中山医院</a></li>
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/16062/section/1101"
+                                                class="list-contain-link">首都医科大学附属北京安贞医院</a></li>
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/9348/section/1101"
+                                                class="list-contain-link">广东省人民医院</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="home-hospital-container" style="display: inline-block;">
+                            <div class="home-hospital-container-item">
+                                <div class="list-contain">
+                                    <div class="list-contain-title">
+                                        <div><a href="https://dxy.com/search/health/index?keyword=冠心病"
+                                                style="color:#28b7a3">冠心病</a><span class="more-arrow"></span></div>
+                                    </div>
+                                    <ul class="list-contain-ul">
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/8266/section/1101"
+                                                class="list-contain-link">中国医学科学院阜外心血管病医院</a></li>
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/3324/section/1101"
+                                                class="list-contain-link">复旦大学附属中山医院</a></li>
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/16062/section/1101"
+                                                class="list-contain-link">首都医科大学附属北京安贞医院</a></li>
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/9348/section/1101"
+                                                class="list-contain-link">广东省人民医院</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="home-hospital-container" style="display: inline-block;">
+                            <div class="home-hospital-container-item">
+                                <div class="list-contain">
+                                    <div class="list-contain-title">
+                                        <div><a href="https://dxy.com/search/health/index?keyword=荨麻疹"
+                                                style="color:#28b7a3">荨麻疹</a><span class="more-arrow"></span></div>
+                                    </div>
+                                    <ul class="list-contain-ul">
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/6006/section/1105"
+                                                class="list-contain-link">天津医科大学总医院</a></li>
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/8555/section/1105"
+                                                class="list-contain-link">重庆医科大学附属儿童医院</a></li>
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/7323/section/1105"
+                                                class="list-contain-link">北京世纪坛医院</a></li>
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/8221/section/1105"
+                                                class="list-contain-link">西安市儿童医院</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="home-hospital-container" style="display: inline-block;">
+                            <div class="home-hospital-container-item">
+                                <div class="list-contain">
+                                    <div class="list-contain-title">
+                                        <div><a href="https://dxy.com/search/health/index?keyword=糖尿病"
+                                                style="color:#28b7a3">糖尿病</a><span class="more-arrow"></span></div>
+                                    </div>
+                                    <ul class="list-contain-ul">
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/9120/section/1104"
+                                                class="list-contain-link">上海交通大学医学院附属瑞金医院</a></li>
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/13744/section/1104"
+                                                class="list-contain-link">北京协和医院</a></li>
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/12704/section/1104"
+                                                class="list-contain-link">中国人民解放军总医院</a></li>
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/7453/section/1104"
+                                                class="list-contain-link">中南大学湘雅二医院</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="home-hospital-container" style="display: inline-block;">
+                            <div class="home-hospital-container-item">
+                                <div class="list-contain">
+                                    <div class="list-contain-title">
+                                        <div><a href="https://dxy.com/search/health/index?keyword=前列腺炎"
+                                                style="color:#28b7a3">前列腺炎</a><span class="more-arrow"></span></div>
+                                    </div>
+                                    <ul class="list-contain-ul">
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/19129/section/1205"
+                                                class="list-contain-link">北京大学第一医院</a></li>
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/12704/section/1205"
+                                                class="list-contain-link">中国人民解放军总医院</a></li>
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/11390/section/1205"
+                                                class="list-contain-link">上海长海医院</a></li>
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/10104/section/1205"
+                                                class="list-contain-link">华中科技大学同济医学院附属同济医院</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="home-hospital-container" style="display: inline-block;">
+                            <div class="home-hospital-container-item">
+                                <div class="list-contain">
+                                    <div class="list-contain-title">
+                                        <div><a href="https://dxy.com/search/health/index?keyword=便秘"
+                                                style="color:#28b7a3">便秘</a><span class="more-arrow"></span></div>
+                                    </div>
+                                    <ul class="list-contain-ul">
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/15390/section/1103"
+                                                class="list-contain-link">西京医院</a></li>
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/16275/section/1103"
+                                                class="list-contain-link">上海交通大学医学院附属仁济医院</a></li>
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/13744/section/1103"
+                                                class="list-contain-link">北京协和医院</a></li>
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/12704/section/1103"
+                                                class="list-contain-link">中国人民解放军总医院</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="home-hospital-container" style="display: inline-block;">
+                            <div class="home-hospital-container-item">
+                                <div class="list-contain">
+                                    <div class="list-contain-title">
+                                        <div><a href="https://dxy.com/search/health/index?keyword=骨折"
+                                                style="color:#28b7a3">骨折</a><span class="more-arrow"></span></div>
+                                    </div>
+                                    <ul class="list-contain-ul">
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/12704/section/1204"
+                                                class="list-contain-link">中国人民解放军总医院</a></li>
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/19504/section/1204"
+                                                class="list-contain-link">上海市第六人民医院</a></li>
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/10444/section/1204"
+                                                class="list-contain-link">北京大学第三医院</a></li>
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/13744/section/1204"
+                                                class="list-contain-link">北京协和医院</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                    <div>
+                        <div class="home-hospital-container" style="display: inline-block;">
+                            <div class="home-hospital-container-item">
+                                <div class="list-contain">
+                                    <div class="list-contain-title">
+                                        <div><a href="https://dxy.com/search/health/index?keyword=病毒性肝炎"
+                                                style="color:#28b7a3">病毒性肝炎</a><span class="more-arrow"></span>
+                                        </div>
+                                    </div>
+                                    <ul class="list-contain-ul">
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/14881/section/1110"
+                                                class="list-contain-link">复旦大学附属华山医院</a></li>
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/9572/section/1110"
+                                                class="list-contain-link">首都医科大学附属地坛医院</a></li>
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/9120/section/1110"
+                                                class="list-contain-link">上海交通大学医学院附属瑞金医院</a></li>
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/4766/section/1110"
+                                                class="list-contain-link">中山大学附属第三医院</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="home-hospital-container" style="display: inline-block;">
+                            <div class="home-hospital-container-item">
+                                <div class="list-contain">
+                                    <div class="list-contain-title">
+                                        <div><a href="https://dxy.com/search/health/index?keyword=高血压"
+                                                style="color:#28b7a3">高血压</a><span class="more-arrow"></span></div>
+                                    </div>
+                                    <ul class="list-contain-ul">
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/8266/section/1101"
+                                                class="list-contain-link">中国医学科学院阜外心血管病医院</a></li>
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/3324/section/1101"
+                                                class="list-contain-link">复旦大学附属中山医院</a></li>
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/16062/section/1101"
+                                                class="list-contain-link">首都医科大学附属北京安贞医院</a></li>
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/9348/section/1101"
+                                                class="list-contain-link">广东省人民医院</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="home-hospital-container" style="display: inline-block;">
+                            <div class="home-hospital-container-item">
+                                <div class="list-contain">
+                                    <div class="list-contain-title">
+                                        <div><a href="https://dxy.com/search/health/index?keyword=冠心病"
+                                                style="color:#28b7a3">冠心病</a><span class="more-arrow"></span></div>
+                                    </div>
+                                    <ul class="list-contain-ul">
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/8266/section/1101"
+                                                class="list-contain-link">中国医学科学院阜外心血管病医院</a></li>
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/3324/section/1101"
+                                                class="list-contain-link">复旦大学附属中山医院</a></li>
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/16062/section/1101"
+                                                class="list-contain-link">首都医科大学附属北京安贞医院</a></li>
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/9348/section/1101"
+                                                class="list-contain-link">广东省人民医院</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="home-hospital-container" style="display: inline-block;">
+                            <div class="home-hospital-container-item">
+                                <div class="list-contain">
+                                    <div class="list-contain-title">
+                                        <div><a href="https://dxy.com/search/health/index?keyword=荨麻疹"
+                                                style="color:#28b7a3">荨麻疹</a><span class="more-arrow"></span></div>
+                                    </div>
+                                    <ul class="list-contain-ul">
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/6006/section/1105"
+                                                class="list-contain-link">天津医科大学总医院</a></li>
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/8555/section/1105"
+                                                class="list-contain-link">重庆医科大学附属儿童医院</a></li>
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/7323/section/1105"
+                                                class="list-contain-link">北京世纪坛医院</a></li>
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/8221/section/1105"
+                                                class="list-contain-link">西安市儿童医院</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="home-hospital-container" style="display: inline-block;">
+                            <div class="home-hospital-container-item">
+                                <div class="list-contain">
+                                    <div class="list-contain-title">
+                                        <div><a href="https://dxy.com/search/health/index?keyword=糖尿病"
+                                                style="color:#28b7a3">糖尿病</a><span class="more-arrow"></span></div>
+                                    </div>
+                                    <ul class="list-contain-ul">
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/9120/section/1104"
+                                                class="list-contain-link">上海交通大学医学院附属瑞金医院</a></li>
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/13744/section/1104"
+                                                class="list-contain-link">北京协和医院</a></li>
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/12704/section/1104"
+                                                class="list-contain-link">中国人民解放军总医院</a></li>
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/7453/section/1104"
+                                                class="list-contain-link">中南大学湘雅二医院</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="home-hospital-container" style="display: inline-block;">
+                            <div class="home-hospital-container-item">
+                                <div class="list-contain">
+                                    <div class="list-contain-title">
+                                        <div><a href="https://dxy.com/search/health/index?keyword=前列腺炎"
+                                                style="color:#28b7a3">前列腺炎</a><span class="more-arrow"></span></div>
+                                    </div>
+                                    <ul class="list-contain-ul">
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/19129/section/1205"
+                                                class="list-contain-link">北京大学第一医院</a></li>
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/12704/section/1205"
+                                                class="list-contain-link">中国人民解放军总医院</a></li>
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/11390/section/1205"
+                                                class="list-contain-link">上海长海医院</a></li>
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/10104/section/1205"
+                                                class="list-contain-link">华中科技大学同济医学院附属同济医院</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="home-hospital-container" style="display: inline-block;">
+                            <div class="home-hospital-container-item">
+                                <div class="list-contain">
+                                    <div class="list-contain-title">
+                                        <div><a href="https://dxy.com/search/health/index?keyword=便秘"
+                                                style="color:#28b7a3">便秘</a><span class="more-arrow"></span></div>
+                                    </div>
+                                    <ul class="list-contain-ul">
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/15390/section/1103"
+                                                class="list-contain-link">西京医院</a></li>
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/16275/section/1103"
+                                                class="list-contain-link">上海交通大学医学院附属仁济医院</a></li>
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/13744/section/1103"
+                                                class="list-contain-link">北京协和医院</a></li>
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/12704/section/1103"
+                                                class="list-contain-link">中国人民解放军总医院</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="home-hospital-container" style="display: inline-block;">
+                            <div class="home-hospital-container-item">
+                                <div class="list-contain">
+                                    <div class="list-contain-title">
+                                        <div><a href="https://dxy.com/search/health/index?keyword=骨折"
+                                                style="color:#28b7a3">骨折</a><span class="more-arrow"></span></div>
+                                    </div>
+                                    <ul class="list-contain-ul">
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/12704/section/1204"
+                                                class="list-contain-link">中国人民解放军总医院</a></li>
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/19504/section/1204"
+                                                class="list-contain-link">上海市第六人民医院</a></li>
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/10444/section/1204"
+                                                class="list-contain-link">北京大学第三医院</a></li>
+                                        <li style="width:100%" class="list-contain-no-icon"><a
+                                                href="https://dxy.com/health/hospital/13744/section/1204"
+                                                class="list-contain-link">北京协和医院</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12" style="height: 2rem;"></div>
+
+
+    </main>
+
+    <script src="lib/jquery.js"></script>
+    <script src="lib/bootstrap.bundle.js"></script>
+    <script>
+        $(".collapse-open").click(function () {
+            $(".collapse").collapse('hide');
+            let id = $(this).attr('for');
+            $(".collapse[id=\'" + id + "\']").collapse('show');
+        });
+    </script>
+</body>
+
+</html>
